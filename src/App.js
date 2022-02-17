@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from 'react'
+import './Assets/Style.css';
+import Initial from './components/initial';
+import Confirm from './components/confirm';
+import Result from './components/result';
+import { MyContext } from './Context';
+import "animate.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
+const App = () => {
+
+  const mycont = useContext(MyContext);
+
+  const handlComponent = () => {
+    const screen1 = mycont.state.screen;
+    if (screen1 === 0) return <Initial />
+    if (screen1 === 1) return <Confirm />
+    if (screen1 === 2) return <Result />
+
+  }
+
+  console.log('--', mycont.state);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <div>
+        <ToastContainer />
+
+      </div>
+      <div className="container">
+
+        {handlComponent()}
+
+      QA Analysis
+
+      </div>
+     
     </div>
   );
 }
