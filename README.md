@@ -1,3 +1,25 @@
+
+
+
+This project contains below 
+1>  User effect 
+2> USe state 
+3> Toast for displaying Alerts 
+4>
+Put this in Setting of Visual studio to enable JSX + HTML intellcence
+"emmet.includeLanguages": {
+     "javascript": "javascriptreact"     
+    }
+
+5> To have animation effect to Button use this 
+Npm Install animate.css –save   www.	
+Include  “ Import “animate.css”   into APP .js 
+Then use as  , Animate__Animated as basic animation class
+ <!-- <button type="button animate__animated   animate__bounce" > -->
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
